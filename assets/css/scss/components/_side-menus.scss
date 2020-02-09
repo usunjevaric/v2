@@ -1,0 +1,64 @@
+.side-email {
+  position: fixed;
+  bottom: 0;
+  right: $side-padding;
+}
+
+.side-email__link {
+  writing-mode: vertical-rl;
+  font-size: 1.2rem;
+  font-family: $raleway;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  letter-spacing: 3px;
+  margin-bottom: 3rem;
+  color: $primary-gray;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+.side-email__link:hover {
+  transform: translateY(-4px);
+  color: $primary-blue;
+}
+.side-email::after,
+.side-social::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  background-color: $primary-gray;
+  margin: 0px auto;
+}
+
+.side-social {
+  position: fixed;
+  bottom: 0;
+  left: $side-padding;
+  color: $primary-gray;
+}
+
+.side-social__list__item {
+  display: flex;
+  margin: 1rem 0;
+  padding: 0.7rem;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+.side-social__list:last-child {
+  margin-bottom: 3rem;
+}
+.side-social__list__item:hover {
+  transform: translateY(-4px);
+  color: $primary-blue;
+}
+
+.side-social__list__item svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.side-email,
+.side-social {
+  opacity: 0;
+  animation: 2s fadeInAnimation 3.9s forwards;
+}

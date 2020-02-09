@@ -1,0 +1,25 @@
+.btn {
+  border: none;
+  background: none;
+  font-family: $mono;
+  transition: 0.2s ease-in-out;
+}
+
+.btn--primary {
+  border: 1px solid $primary-blue;
+  border-radius: 3px;
+  color: $primary-blue;
+  cursor: pointer;
+}
+.btn--primary:hover {
+  color: $primary-blue;
+  background-color: rgba($color: $primary-blue, $alpha: 0.3);
+  transition: 0.2s ease-in-out;
+}
+
+.btn--welcome {
+  padding: 2rem 3rem;
+  font-size: 1.4rem;
+  opacity: 0;
+  animation: 1s menuItemSlideFromBootomAnimation 3s forwards;
+}

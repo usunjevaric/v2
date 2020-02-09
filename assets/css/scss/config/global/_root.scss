@@ -1,4 +1,21 @@
+::selection {
+  background: lighten($color: #364f6b, $amount: 30%);
+}
+* {
+  box-sizing: border-box;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1600px;
+  padding: 150px 170px;
+  margin: 0 auto;
+}
+body {
+  background-color: $primary-bg;
 }

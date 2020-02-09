@@ -1,33 +1,26 @@
 .hero {
-  height: 100vh;
+  // height: 100vh;
   width: 100%;
-  background-image: url("../images/adventure-calm-clouds-dawn-414171.jpg");
-  background-color: rgba($color: #000000, $alpha: 0.4);
-  background-blend-mode: multiply;
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-bottom: 200rem;
 }
-
 .navigation {
   position: fixed;
   left: 0;
   top: 0;
-  width: 90%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 10rem;
-  color: $light-gray;
-  padding: 0 5%;
+  color: $primary-gray;
+  padding: 0 $side-padding;
   transition: 0.4s ease-out;
 }
 
-.navigation--black {
-  background-color: rgb(19, 19, 19);
+.navigation--scroll {
+  background-color: $secondary-bg;
   height: 6rem;
   transition: 0.4s ease-out;
+  z-index: 99;
 }
 
 .navigation__logo {
@@ -35,22 +28,92 @@
   font-family: $titillium;
   font-weight: 900;
 }
+.navigation__logo__link {
+  color: $primary-gray;
+  animation: 2s ease fadeInAnimation;
+}
+.navigation__logo__image {
+  width: 15%;
+  margin-right: 10px;
+}
 .navigation__logo__link:hover,
 .menu__item:hover {
-  color: darken($color: #fff, $amount: 25%);
+  color: $primary-blue;
+  transition: 0.3s color ease-in-out;
 }
 
 .navigation__menu {
   color: #ffffff;
   font-size: 1.4rem;
-  text-transform: uppercase;
   font-family: $roboto;
 }
 
 .menu {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .menu__item {
   margin: 0 3rem;
+  transition: 0.3s color ease-in-out;
+}
+.menu__item__button {
+  padding: 1rem 2rem;
+  animation: 2s ease fadeInAnimation;
+}
+.last-item {
+  margin-right: 0px;
+  margin-left: 40px;
+}
+
+.welcome {
+  font-family: $roboto;
+  color: $primary-gray;
+  font-family: $calibre;
+}
+
+.welcome__paragraph {
+  color: $primary-blue;
+  font-size: 1.6rem;
+  font-family: $mono;
+  font-weight: normal;
+  margin: 0px 0px 20px 3px;
+  opacity: 0;
+  animation: 1s menuItemSlideFromTopAnimation 1s forwards;
+}
+
+.welcome__h2 {
+  font-size: 8rem;
+  line-height: 1.1;
+  opacity: 0;
+  animation: 1s menuItemSlideFromTopAnimation 1.5s forwards;
+}
+
+.welcome__h4 {
+  font-size: 6rem;
+  line-height: 1.2;
+  color: darken($color: $primary-gray, $amount: 30%);
+  opacity: 0;
+  animation: 1s menuItemSlideFromTopAnimation 2s forwards;
+}
+.welcome__about {
+  font-size: 2rem;
+  margin: 4rem 0;
+  width: 40%;
+  line-height: 1.5;
+  color: darken($color: $primary-gray, $amount: 10%);
+  opacity: 0;
+  animation: 1s menuItemSlideFromBootomAnimation 2.6s forwards;
+}
+.slideFromTop {
+  animation: 1s ease menuItemSlideFromTopAnimation forwards;
+  opacity: 0;
+}
+
+@for $i from 1 to 5 {
+  .slideFromTop {
+    &:nth-child(#{$i}) {
+      animation-delay: $i * (1s/13);
+    }
+  }
 }
