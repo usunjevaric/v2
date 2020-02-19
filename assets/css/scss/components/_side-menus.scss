@@ -13,7 +13,7 @@
   position: relative;
   letter-spacing: 3px;
   margin-bottom: 3rem;
-  color: $primary-gray;
+  color: darken($color: $primary-gray, $amount: 30%);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
 .side-email__link:hover {
@@ -26,7 +26,7 @@
   display: block;
   width: 1px;
   height: 90px;
-  background-color: $primary-gray;
+  background-color: darken($color: $primary-gray, $amount: 30%);
   margin: 0px auto;
 }
 
@@ -34,7 +34,7 @@
   position: fixed;
   bottom: 0;
   left: $side-padding;
-  color: $primary-gray;
+  color: darken($color: $primary-gray, $amount: 30%);
 }
 
 .side-social__list__item {
@@ -61,4 +61,7 @@
 .side-social {
   opacity: 0;
   animation: 2s fadeInAnimation 3.9s forwards;
+  @include for-phone {
+    display: none;
+  }
 }

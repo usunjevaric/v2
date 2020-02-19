@@ -5,9 +5,11 @@ const NAVIGATONLOGO = document.querySelector('navigation__logo__link');
 const RESUMEBTN = document.querySelector('menu__item__button');
 const ABOUTSECTION = document.getElementById('about');
 const ABOUTCONTENT = document.querySelector('.about');
-
-
-
+const MENU = document.querySelector('.menu');
+const HAMBURGER = document.querySelector('.hamburger');
+const PHONENAVIGATION = document.querySelector('.phone-navigation');
+const BODY = document.querySelector('body');
+const PHONEMENUITEMS = document.querySelectorAll('.phone-menu__item');
 window.addEventListener('scroll', () => {
   if (window.pageYOffset > 90) {
     NAVIGATION.classList.add('navigation--scroll')
@@ -37,7 +39,6 @@ function throttleScroll(e) {
 function animateElements(e) {
   if (isElementVisible(ABOUTSECTION)) {
     ABOUTCONTENT.classList.add("slideBottom");
-
   }
 }
 
@@ -46,3 +47,13 @@ function isElementVisible(el) {
   const top = elementBoundary.top;
   return ((top <= 250));
 }
+
+HAMBURGER.addEventListener('click', togglePhoneMenu)
+
+function togglePhoneMenu() {
+  PHONENAVIGATION.classList.toggle('showMenu')
+  HAMBURGER.classList.toggle('hamburger__close')
+  BODY.classList.toggle('blur')
+}
+
+PHONEMENUITEMS.forEach(item => item.addEventListener('click', togglePhoneMenu));

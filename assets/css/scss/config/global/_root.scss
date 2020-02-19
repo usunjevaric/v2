@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 ::selection {
   background: lighten($color: #364f6b, $amount: 30%);
 }
@@ -13,9 +16,51 @@ a {
 .container {
   width: 100%;
   max-width: 1600px;
-  padding: 150px 170px;
+  padding: 200px 170px 50px 170px;
   margin: 0 auto;
+
+  @include for-phone {
+    padding: 170px 20px 30px 20px;
+  }
 }
+
 body {
   background-color: $primary-bg;
+  overflow-x: hidden;
+}
+
+.blur {
+  overflow-y: hidden;
+}
+
+.section__heading {
+  font-family: $calibre;
+  color: $primary-gray;
+  position: relative;
+  font-size: 3.2rem;
+  line-height: 1.3;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+
+  @include for-phone {
+    font-weight: 700;
+    font-size: 3rem;
+  }
+}
+//line after heading
+.section__heading::after {
+  display: block;
+  position: relative;
+  content: "";
+  height: 1px;
+  opacity: 0.4;
+  width: 265px;
+  background-color: $primary-gray;
+  top: 2px;
+  margin-left: 20px;
+
+  @include for-phone {
+    display: none;
+  }
 }

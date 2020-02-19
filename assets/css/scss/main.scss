@@ -1,10 +1,13 @@
+@import "./config/variables/brake-points";
 @import "./config/variables/colors";
+@import "./config/variables/fonts";
 @import "./config/global/root";
 @import "./config/global/sizing";
 @import "./config/global/reset";
 @import "./config/global/animations";
-@import "./config/variables/fonts";
 @import "./components/buttons";
+@import "./components/phone-navigation";
 @import "./components/hero";
 @import "./components/side-menus";
 @import "./components/about";
+@import "./components/expirience";

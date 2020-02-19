@@ -22,4 +22,69 @@
   font-size: 1.4rem;
   opacity: 0;
   animation: 1s menuItemSlideFromBootomAnimation 3s forwards;
+  @include for-phone {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    padding: 1.5rem 2rem;
+  }
+}
+
+.menu__item__button {
+  padding: 1rem 2rem;
+  animation: 2s ease fadeInAnimation;
+}
+
+.hamburger {
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  position: relative;
+  display: none;
+  border-radius: 3px;
+  @include for-phone {
+    display: block;
+    transition-duration: 0.22s;
+    transition-delay: 0.2s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  animation: 2s ease fadeInAnimation;
+}
+
+.hamburger__line {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background-color: $primary-blue;
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger__line:nth-child(2) {
+  top: 10px;
+  width: 90%;
+}
+
+.hamburger__line:nth-child(3) {
+  top: 20px;
+  width: 80%;
+}
+
+.hamburger__close {
+  transform: rotate(-90deg);
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger__close .hamburger__line:nth-child(1) {
+  top: 10px;
+  transform: rotate(-45deg);
+}
+.hamburger__close .hamburger__line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger__close .hamburger__line:nth-child(3) {
+  top: 10px;
+  width: 100%;
+  transform: rotate(45deg);
 }

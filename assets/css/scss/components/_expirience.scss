@@ -1,0 +1,130 @@
+.timeline {
+  color: white;
+  margin-top: 6rem;
+  color: darken($color: $primary-gray, $amount: 20%);
+  font-size: 1.6rem;
+  font-family: $calibre;
+  position: relative;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+
+  @include for-phone {
+    left: 20px;
+  }
+}
+
+.timeline-container {
+  padding: 1rem 4rem;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+
+  @include for-phone {
+    width: 100%;
+  }
+}
+.timeline-container:nth-child(odd) {
+  left: 0;
+  @include for-phone {
+    left: 20px;
+  }
+}
+
+.timeline-container:nth-child(even) {
+  left: 50%;
+  @include for-phone {
+    left: 20px;
+  }
+}
+
+.timeline-container::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: -10px;
+  background-color: $primary-bg;
+  border: 2px solid $primary-blue;
+  top: 25px;
+  border-radius: 50%;
+  z-index: 1;
+
+  @include for-phone {
+    left: -9px;
+  }
+}
+.timeline-container:nth-child(even)::after {
+  left: -9px;
+}
+
+.timeline-container__content {
+  background-color: lighten($color: $primary-bg, $amount: 3%);
+  border-radius: 10px;
+  padding: 1rem 3rem 2rem;
+  position: relative;
+}
+
+.timeline-container:nth-child(odd) .timeline-container__content {
+  box-shadow: 2px 1px 5px darken($color: $primary-bg, $amount: 5%);
+  @include for-phone {
+    box-shadow: -2px 1px 5px darken($color: $primary-bg, $amount: 5%);
+  }
+}
+.timeline-container:nth-child(even) .timeline-container__content {
+  box-shadow: -2px 1px 5px darken($color: $primary-bg, $amount: 5%);
+}
+
+.timeline-container:nth-child(even) .timeline-container__content::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 10px;
+  width: 0;
+  z-index: 1;
+  left: -12px;
+  border: medium solid lighten($color: $primary-bg, $amount: 3%);
+  border-width: 15px 15px 15px 0;
+  border-color: transparent lighten($color: $primary-bg, $amount: 3%) transparent transparent;
+}
+
+.timeline-container:nth-child(odd) .timeline-container__content::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 10px;
+  width: 0;
+  z-index: 1;
+  right: -12px;
+  border: medium solid lighten($color: $primary-bg, $amount: 3%);
+  border-width: 15px 0px 15px 15px;
+  border-color: transparent transparent transparent lighten($color: $primary-bg, $amount: 3%);
+
+  @include for-phone {
+    left: -12px;
+    border-width: 15px 15px 15px 0;
+    border-color: transparent lighten($color: $primary-bg, $amount: 3%) transparent transparent;
+  }
+}
+
+.company-name {
+  font-size: 2.2rem;
+  color: $primary-blue;
+}
+.work-period {
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+  margin-bottom: 2rem;
+  font-weight: 100;
+}
+.work-description {
+  line-height: 1.4;
+}
