@@ -22,11 +22,11 @@ a:visited {
 .container {
   width: 100%;
   max-width: 1600px;
-  padding: 100px 170px 50px 170px;
+  padding: 50px 170px 50px 170px;
   margin: 0 auto; }
   @media (max-width: 599px) {
     .container {
-      padding: 170px 20px 30px 20px; } }
+      padding: 70px 20px 30px 20px; } }
 
 body {
   background-color: #09192f;
@@ -61,6 +61,9 @@ body {
   @media (max-width: 599px) {
     .section__heading::after {
       display: none; } }
+
+.active--link {
+  color: #64ffda; }
 
 html,
 body,
@@ -486,7 +489,7 @@ textarea {
     opacity: 1; } }
 
 .slideBottom {
-  animation: 1s menuItemSlideFromBootomAnimation forwards; }
+  animation: 0.7s menuItemSlideFromBootomAnimation forwards; }
 
 .btn {
   border: none;
@@ -509,12 +512,14 @@ textarea {
   padding: 2rem 3rem;
   font-size: 1.4rem;
   opacity: 0;
-  animation: 1s menuItemSlideFromBootomAnimation 3s forwards; }
+  animation: 0.5s menuItemSlideFromBootomAnimation 2.5s forwards;
+  z-index: 1000; }
   @media (max-width: 599px) {
     .btn--welcome {
       font-size: 1.2rem;
       margin-top: 2rem;
-      padding: 1.5rem 2rem; } }
+      padding: 1.5rem 2rem;
+      animation-delay: 2s; } }
 
 .btn--contact {
   padding: 1.8rem 3.6rem;
@@ -583,7 +588,9 @@ textarea {
       width: 75%;
       height: 100%;
       display: flex;
-      justify-content: flex-start; } }
+      justify-content: flex-start;
+      transform: translateX(-105%);
+      transition-duration: 0.4s; } }
 
 .phone-navigation {
   display: none; }
@@ -723,10 +730,11 @@ textarea {
   font-family: "Roboto", sans-serif;
   color: #f0f0f0;
   font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
-  margin-top: 10rem; }
+  margin-top: 15rem; }
   @media (max-width: 599px) {
     .welcome {
-      margin-top: 0; } }
+      margin-top: 10rem;
+      margin-bottom: 10rem; } }
 
 .welcome__paragraph {
   color: #64ffda;
@@ -735,29 +743,32 @@ textarea {
   font-weight: normal;
   margin: 0px 0px 20px 3px;
   opacity: 0;
-  animation: 1s menuItemSlideFromTopAnimation 1s forwards; }
+  animation: 0.5s menuItemSlideFromTopAnimation 1s forwards; }
   @media (max-width: 599px) {
     .welcome__paragraph {
-      font-size: 1.3rem; } }
+      font-size: 1.3rem;
+      animation-delay: 0.6s; } }
 
 .welcome__h2 {
   font-size: 8rem;
   line-height: 1.1;
   opacity: 0;
-  animation: 1s menuItemSlideFromTopAnimation 1.5s forwards; }
+  animation: 0.5s menuItemSlideFromTopAnimation 1.3s forwards; }
   @media (max-width: 599px) {
     .welcome__h2 {
-      font-size: 3.8rem; } }
+      font-size: 3.8rem;
+      animation-delay: 0.9s; } }
 
 .welcome__h4 {
   font-size: 6rem;
   line-height: 1.2;
   color: #a4a4a4;
   opacity: 0;
-  animation: 1s menuItemSlideFromTopAnimation 2s forwards; }
+  animation: 0.5s menuItemSlideFromTopAnimation 1.7s forwards; }
   @media (max-width: 599px) {
     .welcome__h4 {
-      font-size: 3.2rem; } }
+      font-size: 3.2rem;
+      animation-delay: 1.2s; } }
 
 .welcome__about {
   font-size: 2rem;
@@ -766,12 +777,13 @@ textarea {
   line-height: 1.5;
   color: #d7d7d7;
   opacity: 0;
-  animation: 1s menuItemSlideFromBootomAnimation 2.6s forwards; }
+  animation: 0.5s menuItemSlideFromBootomAnimation 2.1s forwards; }
   @media (max-width: 599px) {
     .welcome__about {
       width: 100%;
       font-size: 1.6rem;
-      margin: 2rem 0; } }
+      margin: 2rem 0;
+      animation-delay: 1.6s; } }
 
 .slideFromTop {
   animation: 1s ease menuItemSlideFromTopAnimation forwards;
@@ -856,7 +868,8 @@ textarea {
   display: flex;
   align-items: center;
   opacity: 0;
-  margin-top: 10rem; }
+  margin-top: 15rem;
+  margin-bottom: 10rem; }
   @media (max-width: 599px) {
     .about {
       flex-direction: column;
@@ -945,7 +958,8 @@ textarea {
 
 .expirience {
   opacity: 0;
-  margin-top: 10rem; }
+  margin-top: 5rem;
+  margin-bottom: 10rem; }
   @media (max-width: 599px) {
     .expirience {
       margin-top: 0; } }
@@ -1071,11 +1085,13 @@ textarea {
   line-height: 1.4; }
 
 .work {
-  margin-top: 10rem;
-  opacity: 0; }
+  opacity: 0;
+  margin-top: 5rem;
+  margin-bottom: 7rem; }
   @media (max-width: 599px) {
     .work {
-      margin-top: 0; } }
+      margin-top: 0;
+      margin-bottom: 10rem; } }
 
 .portfolio {
   margin-top: 20px;
@@ -1112,7 +1128,8 @@ textarea {
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: space-between;
+  opacity: 0; }
 
 .card__header {
   display: flex;
@@ -1147,18 +1164,51 @@ textarea {
   word-spacing: 15px;
   font-family: "Titillium Web", sans-serif; }
 
+.slideInCard:nth-child(1) {
+  animation: 0.5s ease slideInCard forwards;
+  animation-delay: 0.1s; }
+
+.slideInCard:nth-child(2) {
+  animation: 0.5s ease slideInCard forwards;
+  animation-delay: 0.2s; }
+
+.slideInCard:nth-child(3) {
+  animation: 0.5s ease slideInCard forwards;
+  animation-delay: 0.3s; }
+
+.slideInCard:nth-child(4) {
+  animation: 0.5s ease slideInCard forwards;
+  animation-delay: 0.4s; }
+
+.slideInCard:nth-child(5) {
+  animation: 0.5s ease slideInCard forwards;
+  animation-delay: 0.5s; }
+
+.slideInCard:nth-child(6) {
+  animation: 0.5s ease slideInCard forwards;
+  animation-delay: 0.6s; }
+
+@keyframes slideInCard {
+  0% {
+    transform: translateY(50px);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+
 .contact {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   width: 60%;
-  margin: 0 auto;
+  margin: 8rem auto 0 auto;
   font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
   opacity: 0; }
   @media (max-width: 599px) {
     .contact {
-      width: 90%; } }
+      width: 90%;
+      margin-top: 0; } }
 
 .contact__heading {
   font-size: 4rem;

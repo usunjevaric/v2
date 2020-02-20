@@ -2,7 +2,8 @@
   display: flex;
   align-items: center;
   opacity: 0;
-  margin-top: 10rem;
+  margin-top: 15rem;
+  margin-bottom: 10rem;
   @include for-phone {
     flex-direction: column;
     margin-top: 0;
@@ -27,7 +28,6 @@
 
   @include for-phone {
     font-size: 1.6rem;
-    // line-height: 1;
     margin-top: 2rem;
   }
 }

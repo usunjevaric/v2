@@ -23,11 +23,12 @@ a:visited {
 .container {
   width: 100%;
   max-width: 1600px;
-  padding: 100px 170px 50px 170px;
+  padding: 50px 170px 50px 170px;
   margin: 0 auto;
-  // background-color: red;
+  // background-color: green;
+  // border-bottom: 1px solid red;
   @include for-phone {
-    padding: 170px 20px 30px 20px;
+    padding: 70px 20px 30px 20px;
     // margin-top: 170px;
   }
 }
@@ -71,4 +72,8 @@ body {
   @include for-phone {
     display: none;
   }
+}
+
+.active--link {
+  color: $primary-blue;
 }

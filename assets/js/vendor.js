@@ -10,6 +10,8 @@ const HAMBURGER = document.querySelector('.hamburger');
 const PHONENAVIGATION = document.querySelector('.phone-navigation');
 const BODY = document.querySelector('body');
 const PHONEMENUITEMS = document.querySelectorAll('.phone-menu__item');
+const PHONEBACKDROP = document.querySelector('.phone-backdrop');
+const PHONENAVLOGO = document.querySelector('.phone-navigation__logo');
 
 //about
 const ABOUTSECTION = document.getElementById('about');
@@ -17,9 +19,12 @@ const ABOUTCONTENT = document.querySelector('.about');
 //expirience
 const EXPIRIENCESECTION = document.getElementById('expirience');
 const EXPIRIENCECONTENT = document.querySelector('.expirience');
+
 //work
 const WORKSECTION = document.getElementById('work');
 const WORKCONTENT = document.querySelector('.work');
+const PORTFOLIOCARD = document.querySelectorAll('.card');
 //contact
 const CONTACTSECTION = document.getElementById('contact');
 const CONTACTCONTENT = document.querySelector('.contact');
+

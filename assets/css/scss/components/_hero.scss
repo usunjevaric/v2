@@ -86,10 +86,10 @@
   font-family: $roboto;
   color: $primary-gray;
   font-family: $calibre;
-  margin-top: 10rem;
-
+  margin-top: 15rem;
   @include for-phone {
-    margin-top: 0;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
   }
 }
 
@@ -100,10 +100,11 @@
   font-weight: normal;
   margin: 0px 0px 20px 3px;
   opacity: 0;
-  animation: 1s menuItemSlideFromTopAnimation 1s forwards;
+  animation: 0.5s menuItemSlideFromTopAnimation 1s forwards;
 
   @include for-phone {
     font-size: 1.3rem;
+    animation-delay: 0.6s;
   }
 }
 
@@ -111,9 +112,10 @@
   font-size: 8rem;
   line-height: 1.1;
   opacity: 0;
-  animation: 1s menuItemSlideFromTopAnimation 1.5s forwards;
+  animation: 0.5s menuItemSlideFromTopAnimation 1.3s forwards;
   @include for-phone {
     font-size: 3.8rem;
+    animation-delay: 0.9s;
   }
 }
 
@@ -122,9 +124,10 @@
   line-height: 1.2;
   color: darken($color: $primary-gray, $amount: 30%);
   opacity: 0;
-  animation: 1s menuItemSlideFromTopAnimation 2s forwards;
+  animation: 0.5s menuItemSlideFromTopAnimation 1.7s forwards;
   @include for-phone {
     font-size: 3.2rem;
+    animation-delay: 1.2s;
   }
 }
 .welcome__about {
@@ -134,11 +137,12 @@
   line-height: 1.5;
   color: darken($color: $primary-gray, $amount: 10%);
   opacity: 0;
-  animation: 1s menuItemSlideFromBootomAnimation 2.6s forwards;
+  animation: 0.5s menuItemSlideFromBootomAnimation 2.1s forwards;
   @include for-phone {
     width: 100%;
     font-size: 1.6rem;
     margin: 2rem 0;
+    animation-delay: 1.6s;
   }
 }
 .slideFromTop {
@@ -153,5 +157,3 @@
     }
   }
 }
-
-//TODO DELETE BODY FROM TOP

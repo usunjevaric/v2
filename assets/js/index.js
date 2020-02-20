@@ -27,7 +27,12 @@ function animateElements() {
     EXPIRIENCECONTENT.classList.add('slideBottom');
   }
   if (isElementVisible(WORKSECTION)) {
-    WORKCONTENT.classList.add('slideBottom')
+    WORKCONTENT.classList.add('slideBottom');
+    WORKCONTENT.addEventListener('animationend', () => {
+      PORTFOLIOCARD.forEach(card => {
+        card.classList.add('slideInCard')
+      })
+    });
   }
   if (isElementVisible(CONTACTSECTION)) {
     CONTACTCONTENT.classList.add('slideBottom')
@@ -43,13 +48,14 @@ function isElementVisible(el) {
 HAMBURGER.addEventListener('click', togglePhoneMenu)
 
 function togglePhoneMenu() {
+  PHONEBACKDROP.classList.toggle('showMenu');
   PHONENAVIGATION.classList.toggle('showMenu')
   HAMBURGER.classList.toggle('hamburger__close')
   BODY.classList.toggle('blur')
 }
 
 PHONEMENUITEMS.forEach(item => item.addEventListener('click', togglePhoneMenu));
-
+PHONENAVLOGO.addEventListener('click', togglePhoneMenu);
 
 
 
@@ -75,5 +81,6 @@ function openScrollMenu() {
       span.textContent = repos
       svg.append(span);
     })
+
 
 })();
