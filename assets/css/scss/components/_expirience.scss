@@ -1,3 +1,11 @@
+.expirience {
+  opacity: 0;
+  margin-top: 10rem;
+  @include for-phone {
+    margin-top: 0;
+  }
+}
+
 .timeline {
   color: white;
   margin-top: 6rem;
@@ -5,6 +13,9 @@
   font-size: 1.6rem;
   font-family: $calibre;
   position: relative;
+  @include for-phone {
+    margin-top: 4rem;
+  }
 }
 
 .timeline::after {

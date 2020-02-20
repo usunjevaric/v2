@@ -2,8 +2,10 @@
   display: flex;
   align-items: center;
   opacity: 0;
+  margin-top: 10rem;
   @include for-phone {
     flex-direction: column;
+    margin-top: 0;
   }
 }
 

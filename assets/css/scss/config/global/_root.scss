@@ -11,16 +11,24 @@ html {
 a {
   color: inherit;
   text-decoration: none;
+  outline: none;
+}
+a:hover,
+a:active,
+a:focus,
+a:visited {
+  outline: none;
 }
 
 .container {
   width: 100%;
   max-width: 1600px;
-  padding: 200px 170px 50px 170px;
+  padding: 100px 170px 50px 170px;
   margin: 0 auto;
-
+  // background-color: red;
   @include for-phone {
     padding: 170px 20px 30px 20px;
+    // margin-top: 170px;
   }
 }
 
@@ -37,7 +45,7 @@ body {
   font-family: $calibre;
   color: $primary-gray;
   position: relative;
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   line-height: 1.3;
   font-weight: 900;
   display: flex;
@@ -45,7 +53,7 @@ body {
 
   @include for-phone {
     font-weight: 700;
-    font-size: 3rem;
+    // font-size: 3rem;
   }
 }
 //line after heading

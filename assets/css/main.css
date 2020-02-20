@@ -10,12 +10,19 @@ html {
 
 a {
   color: inherit;
-  text-decoration: none; }
+  text-decoration: none;
+  outline: none; }
+
+a:hover,
+a:active,
+a:focus,
+a:visited {
+  outline: none; }
 
 .container {
   width: 100%;
   max-width: 1600px;
-  padding: 200px 170px 50px 170px;
+  padding: 100px 170px 50px 170px;
   margin: 0 auto; }
   @media (max-width: 599px) {
     .container {
@@ -32,15 +39,14 @@ body {
   font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
   color: #f0f0f0;
   position: relative;
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   line-height: 1.3;
   font-weight: 900;
   display: flex;
   align-items: center; }
   @media (max-width: 599px) {
     .section__heading {
-      font-weight: 700;
-      font-size: 3rem; } }
+      font-weight: 700; } }
 
 .section__heading::after {
   display: block;
@@ -510,6 +516,10 @@ textarea {
       margin-top: 2rem;
       padding: 1.5rem 2rem; } }
 
+.btn--contact {
+  padding: 1.8rem 3.6rem;
+  font-size: 2rem; }
+
 .menu__item__button {
   padding: 1rem 2rem;
   animation: 2s ease fadeInAnimation; }
@@ -712,7 +722,11 @@ textarea {
 .welcome {
   font-family: "Roboto", sans-serif;
   color: #f0f0f0;
-  font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif; }
+  font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+  margin-top: 10rem; }
+  @media (max-width: 599px) {
+    .welcome {
+      margin-top: 0; } }
 
 .welcome__paragraph {
   color: #64ffda;
@@ -841,10 +855,12 @@ textarea {
 .about {
   display: flex;
   align-items: center;
-  opacity: 0; }
+  opacity: 0;
+  margin-top: 10rem; }
   @media (max-width: 599px) {
     .about {
-      flex-direction: column; } }
+      flex-direction: column;
+      margin-top: 0; } }
 
 .about-text {
   width: 50%;
@@ -927,6 +943,13 @@ textarea {
 .holder:hover .about-photo__image {
   filter: none; }
 
+.expirience {
+  opacity: 0;
+  margin-top: 10rem; }
+  @media (max-width: 599px) {
+    .expirience {
+      margin-top: 0; } }
+
 .timeline {
   color: white;
   margin-top: 6rem;
@@ -934,6 +957,9 @@ textarea {
   font-size: 1.6rem;
   font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
   position: relative; }
+  @media (max-width: 599px) {
+    .timeline {
+      margin-top: 4rem; } }
 
 .timeline::after {
   content: "";
@@ -1043,3 +1069,144 @@ textarea {
 
 .work-description {
   line-height: 1.4; }
+
+.work {
+  margin-top: 10rem;
+  opacity: 0; }
+  @media (max-width: 599px) {
+    .work {
+      margin-top: 0; } }
+
+.portfolio {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  @media (max-width: 599px) {
+    .portfolio {
+      justify-content: center; } }
+
+.portfolio__item {
+  margin-top: 20px;
+  height: 390px;
+  width: 32%;
+  cursor: pointer;
+  background-color: #172a45;
+  padding: 4rem 3rem;
+  font-size: 1.7rem;
+  color: #bdbdbd;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px #071426;
+  transition: 0.2s ease all;
+  font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif; }
+  @media (max-width: 599px) {
+    .portfolio__item {
+      width: 80%; } }
+
+.portfolio__item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 5px 10px #071426;
+  transition: 0.2s ease; }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.folder-icon svg {
+  width: 30px;
+  fill: #64ffda; }
+
+.link-icon svg {
+  fill: currentColor;
+  width: 20px;
+  transition: 0.2s ease;
+  margin-left: 10px; }
+
+.link-icon svg:hover {
+  fill: #64ffda;
+  transition: 0.2s ease; }
+
+.card__body__title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 2rem; }
+
+.card__body__text {
+  line-height: 1.4; }
+
+.card__footer {
+  opacity: 0.4;
+  font-size: 1.5rem;
+  word-spacing: 15px;
+  font-family: "Titillium Web", sans-serif; }
+
+.contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+  font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+  opacity: 0; }
+  @media (max-width: 599px) {
+    .contact {
+      width: 90%; } }
+
+.contact__heading {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.3;
+  margin-bottom: 3rem;
+  color: #f0f0f0; }
+
+.contact__text {
+  line-height: 1.3;
+  color: #bdbdbd;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 8rem; }
+
+footer {
+  height: 90px;
+  width: 100%;
+  background-color: #020c1b;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.container--footer {
+  color: #a4a4a4;
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+  font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+  height: 60%;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease color; }
+
+.container--footer:hover {
+  color: #64ffda;
+  transition: 0.3s ease color; }
+
+.container--footer svg {
+  fill: currentColor;
+  width: 25px;
+  height: 25px; }
+
+.repos {
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem; }

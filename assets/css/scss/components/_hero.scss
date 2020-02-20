@@ -86,6 +86,11 @@
   font-family: $roboto;
   color: $primary-gray;
   font-family: $calibre;
+  margin-top: 10rem;
+
+  @include for-phone {
+    margin-top: 0;
+  }
 }
 
 .welcome__paragraph {

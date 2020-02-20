@@ -1,29 +1,12 @@
-const NAVIGATION = document.querySelector('.navigation');
-const MENULINKS = document.querySelectorAll('.menu a');
-const LASTMENULINK = MENULINKS[MENULINKS.length - 1];
-const NAVIGATONLOGO = document.querySelector('navigation__logo__link');
-const RESUMEBTN = document.querySelector('menu__item__button');
-const ABOUTSECTION = document.getElementById('about');
-const ABOUTCONTENT = document.querySelector('.about');
-const MENU = document.querySelector('.menu');
-const HAMBURGER = document.querySelector('.hamburger');
-const PHONENAVIGATION = document.querySelector('.phone-navigation');
-const BODY = document.querySelector('body');
-const PHONEMENUITEMS = document.querySelectorAll('.phone-menu__item');
-window.addEventListener('scroll', () => {
-  if (window.pageYOffset > 90) {
-    NAVIGATION.classList.add('navigation--scroll')
-  } else {
-    NAVIGATION.classList.remove('navigation--scroll')
-  }
-})
+window.addEventListener('scroll', openScrollMenu)
 
+//remove class slideFrom top from elements after animaton finished
 LASTMENULINK.addEventListener('animationend', () => {
   MENULINKS.forEach(item => item.classList.remove('slideFromTop'))
 })
 
+//fade animation on section on scroll
 let isScrolling = false;
-
 window.addEventListener('scroll', throttleScroll, false);
 
 function throttleScroll(e) {
@@ -36,9 +19,18 @@ function throttleScroll(e) {
   isScrolling = true;
 }
 
-function animateElements(e) {
+function animateElements() {
   if (isElementVisible(ABOUTSECTION)) {
     ABOUTCONTENT.classList.add("slideBottom");
+  }
+  if (isElementVisible(EXPIRIENCESECTION)) {
+    EXPIRIENCECONTENT.classList.add('slideBottom');
+  }
+  if (isElementVisible(WORKSECTION)) {
+    WORKCONTENT.classList.add('slideBottom')
+  }
+  if (isElementVisible(CONTACTSECTION)) {
+    CONTACTCONTENT.classList.add('slideBottom')
   }
 }
 
@@ -57,3 +49,31 @@ function togglePhoneMenu() {
 }
 
 PHONEMENUITEMS.forEach(item => item.addEventListener('click', togglePhoneMenu));
+
+
+
+
+function openScrollMenu() {
+  if (window.pageYOffset > 90) {
+    NAVIGATION.classList.add('navigation--scroll')
+  } else {
+    NAVIGATION.classList.remove('navigation--scroll')
+  }
+}
+
+//fetch number of my public repos
+(() => {
+  const svg = document.querySelector('.repos');
+
+  fetch('https://api.github.com/users/usunjevaric')
+    .then(res => {
+      return res.json()
+    })
+    .then(data => {
+      const repos = data.public_repos;
+      const span = document.createElement('span')
+      span.textContent = repos
+      svg.append(span);
+    })
+
+})();
