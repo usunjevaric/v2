@@ -28,3 +28,14 @@ const PORTFOLIOCARD = document.querySelectorAll('.card');
 const CONTACTSECTION = document.getElementById('contact');
 const CONTACTCONTENT = document.querySelector('.contact');
 
+//modal
+
+const MODALBG = document.querySelector('.modal-bg')
+const MODALCLOSE = document.querySelector('.modal-close')
+
+const MODALTITLE = document.querySelector('.modal__text__header');
+const MODALTEXT = document.querySelector('.modal__text__about');
+const CODELINK = document.querySelector('.code-link');
+const LIVELINK = document.querySelector('.code-live');
+const MODALIMAGE = document.querySelector('.modal__image img');
+const TECHLIST = document.querySelector('.modal__list');

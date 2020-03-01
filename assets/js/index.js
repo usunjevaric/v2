@@ -49,9 +49,9 @@ HAMBURGER.addEventListener('click', togglePhoneMenu)
 
 function togglePhoneMenu() {
   PHONEBACKDROP.classList.toggle('showMenu');
-  PHONENAVIGATION.classList.toggle('showMenu')
-  HAMBURGER.classList.toggle('hamburger__close')
-  BODY.classList.toggle('blur')
+  PHONENAVIGATION.classList.toggle('showMenu');
+  HAMBURGER.classList.toggle('hamburger__close');
+  BODY.classList.toggle('blur');
 }
 
 PHONEMENUITEMS.forEach(item => item.addEventListener('click', togglePhoneMenu));
@@ -81,6 +81,42 @@ function openScrollMenu() {
       span.textContent = repos
       svg.append(span);
     })
-
-
 })();
+
+function toggleModal() {
+  MODALBG.classList.toggle('modal-bg--active');
+  BODY.classList.toggle('blur');
+}
+function fillModal(card) {
+  const { title, text, codeLink, liveLink, image, tech } = projects[card]
+  MODALTITLE.textContent = title;
+  MODALTEXT.textContent = text;
+  CODELINK.setAttribute('href', `${codeLink}`);
+  LIVELINK.setAttribute('href', `${liveLink}`);
+  MODALIMAGE.setAttribute('src', image);
+  let list = '';
+  tech.forEach(el => {
+    list += `<li class='modal__list__item'>${el}</li>`;
+  })
+  TECHLIST.innerHTML = list;
+}
+//open modal
+PORTFOLIOCARD.forEach(card => {
+  card.addEventListener('click', (e) => {
+    if (!e.target.classList.contains('card__link') && e.target.tagName !== 'path' && e.target.tagName !== 'svg' && !e.target.classList.contains('card__header')) {
+      toggleModal();
+      fillModal(parseInt(e.target.dataset.card) - 1)
+    }
+
+  })
+})
+
+MODALBG.addEventListener('click', (e) => {
+  //check to close modal just after click outside of modal content
+  if (e.target.classList.contains('modal-bg')) {
+    toggleModal()
+  }
+})
+
+MODALCLOSE.addEventListener('click', toggleModal)
+

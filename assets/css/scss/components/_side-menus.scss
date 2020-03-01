@@ -60,7 +60,7 @@
 .side-email,
 .side-social {
   opacity: 0;
-  animation: 2s fadeInAnimation 3.9s forwards;
+  animation: 1s fadeInAnimation 2.5s forwards;
   @include for-phone {
     display: none;
   }

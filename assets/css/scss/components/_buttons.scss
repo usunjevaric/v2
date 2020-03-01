@@ -39,6 +39,43 @@
   animation: 2s ease fadeInAnimation;
 }
 
+.modal__btn {
+  font-family: $calibre;
+  color: $primary-blue;
+  font-size: 1.5rem;
+  margin-left: 4rem;
+  padding: 1rem 3rem;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0 0 5px $primary-bg;
+
+  @include for-phone {
+    margin-left: 0;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+  }
+}
+.modal__btn--git {
+  border: 1px solid $primary-blue;
+
+  &:hover {
+    color: $primary-blue;
+    background-color: rgba($color: $primary-blue, $alpha: 0.3);
+    transition: 0.2s ease-in-out;
+  }
+}
+
+.modal__btn--live {
+  border: 1px solid rgba($color: $primary-blue, $alpha: 0.3);
+  background-color: rgba($color: $primary-blue, $alpha: 0.3);
+  color: $primary-blue;
+
+  &:hover {
+    border: 1px solid $primary-blue;
+    background: none;
+  }
+}
+
 .hamburger {
   width: 30px;
   height: 24px;
@@ -80,10 +117,12 @@
   transition-duration: 0.22s;
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
+
 .hamburger__close .hamburger__line:nth-child(1) {
   top: 10px;
   transform: rotate(-45deg);
 }
+
 .hamburger__close .hamburger__line:nth-child(2) {
   opacity: 0;
 }
