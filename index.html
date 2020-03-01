@@ -18,7 +18,7 @@
   </head>
   <body>
     <!-- navigation, welcome, side-social and side-email start -->
-    <section class="hero">
+    <section class="hero" >
       <!-- navigation for desktop -->
       <nav class="navigation">
         <!-- nav logo for desktop -->
@@ -32,7 +32,7 @@
             <a href="#expirience" class="slideFromTop"><li class="menu__item">Expirience</li></a>
             <a href="#work" class="slideFromTop"><li class="menu__item">Work</li></a>
             <a href="#contact" class="slideFromTop"><li class="menu__item">Contact</li></a>
-            <a href="">
+            <a href="./Uros Sunjevaric-eng.pdf" target="_blank">
               <li class="menu__item btn--primary  menu__item__button last-item">Resume</li>
             </a>
           </ul>
@@ -59,7 +59,9 @@
             <a href="#expirience"><li class="phone-menu__item">Expirience</li></a>
             <a href="#work"><li class="phone-menu__item">Work</li></a>
             <a href="#contact"><li class="phone-menu__item">Contact</li></a>
-            <li class="phone-menu__item btn--primary  phone-menu__item__button">Resume</li>
+            <a href="./Uros Sunjevaric-eng.pdf" target="_blank">
+              <li class="phone-menu__item btn--primary  phone-menu__item__button">Resume</li>
+            </a>
           </ul>
 
           <!-- social links on phone navigation bottom -->
@@ -192,6 +194,8 @@
           </a>
         </div>
       </div>
+
+      <div id="particles"></div>
     </section>
     <!-- hero section, navigation and welcome section end -->
 
@@ -499,7 +503,7 @@ Dice game for two players. All the rules are written in the game. Player roll th
         </div>
 
         <div class="contact__button">
-          <a href="#"><button class="btn btn--primary btn--contact">Say Hello</button></a>
+          <a target="_blank" href="mailto:usunjevaric@gmail.com"><button class="btn btn--primary btn--contact">Say Hello</button></a>
         </div>
       </div>
     </div>
@@ -519,5 +523,11 @@ Dice game for two players. All the rules are written in the game. Player roll th
     <script src="./assets/js/projects.js"></script>
     <script src="./assets/js/vendor.js"></script>
     <script src="./assets/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS.load('particles', './assets/js/particles.json', function() {
+        console.log('callback - particles.js config loaded');
+      });
+    </script>
   </body>
 </html>
