@@ -1,0 +1,38 @@
+footer {
+  height: 90px;
+  width: 100%;
+  background-color: $footer;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container--footer {
+  color: darken($color: $primary-gray, $amount: 30%);
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+  font-family: $calibre;
+  height: 60%;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease color;
+}
+
+.container--footer:hover {
+  color: $primary-blue;
+  transition: 0.3s ease color;
+}
+.container--footer svg {
+  fill: currentColor;
+  width: 25px;
+  height: 25px;
+}
+.repos {
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+}

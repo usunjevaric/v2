@@ -1,0 +1,99 @@
+.about {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  margin-top: 15rem;
+  margin-bottom: 10rem;
+  @include for-phone {
+    flex-direction: column;
+    margin-top: 0;
+  }
+}
+
+.about-text {
+  width: 50%;
+  color: $primary-gray;
+  font-family: $calibre;
+
+  @include for-phone {
+    width: 100%;
+  }
+}
+
+.about-text__paragraph {
+  font-size: 2rem;
+  line-height: 1.3;
+  margin: 3rem 0 0 0;
+  color: darken($color: $primary-gray, $amount: 20%);
+
+  @include for-phone {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+  }
+}
+
+.about-text__technologies {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  overflow: hidden;
+  padding: 0px;
+  margin: 20px 0 0;
+  list-style: none;
+}
+.skil {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+  font-size: 1.3rem;
+}
+.skil::before {
+  content: "▹";
+  position: absolute;
+  left: 0px;
+  color: rgb(100, 255, 218);
+  font-size: 14px;
+  line-height: 12px;
+}
+
+.about-photo {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  @include for-phone {
+    width: 100%;
+    margin-top: 40px;
+  }
+}
+.holder {
+  width: 50%;
+  position: relative;
+}
+.image-backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  justify-content: center;
+  border: 2px solid $primary-blue;
+  transition: 0.5s ease-in-out all;
+}
+.about-photo__image {
+  position: relative;
+  width: 100%;
+  filter: saturate(40%);
+  transition: 0.5s ease-in-out all;
+
+  @include for-phone {
+    filter: none;
+  }
+}
+.holder:hover .image-backdrop {
+  left: 10px;
+  top: 10px;
+}
+.holder:hover .about-photo__image {
+  filter: none;
+}

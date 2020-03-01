@@ -195,10 +195,11 @@ audio:not([controls]) {
  *    user zoom.
  */
 
+//set 1rem to 10px
 html {
-  font-size: 100%; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-  -ms-text-size-adjust: 100%; /* 2 */
+  font-size: 62.5%; /* 1 */
+  -webkit-text-size-adjust: 62.5%; /* 2 */
+  -ms-text-size-adjust: 62.5%; /* 2 */
 }
 
 /**
@@ -410,12 +411,10 @@ textarea {
 }
 
 ::-moz-selection {
-  background: #b3d4fc;
   text-shadow: none;
 }
 
 ::selection {
-  background: #b3d4fc;
   text-shadow: none;
 }
 

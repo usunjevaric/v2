@@ -1,0 +1,144 @@
+.work {
+  opacity: 0;
+  margin-top: 5rem;
+  margin-bottom: 7rem;
+  @include for-phone {
+    margin-top: 0;
+    margin-bottom: 10rem;
+  }
+}
+
+.portfolio {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include for-phone {
+    justify-content: center;
+  }
+}
+
+.portfolio__item {
+  margin-top: 20px;
+  height: 390px;
+  width: 32%;
+  cursor: pointer;
+  background-color: $work-bg;
+  padding: 4rem 3rem;
+  font-size: 1.7rem;
+  color: darken($color: $primary-gray, $amount: 20%);
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px darken($color: $primary-bg, $amount: 2%);
+  transition: 0.2s ease all;
+  font-family: $calibre;
+  @include for-phone {
+    width: 80%;
+  }
+}
+
+.portfolio__item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 5px 10px darken($color: $primary-bg, $amount: 2%);
+  transition: 0.2s ease;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+}
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // pointer-events: none;
+  user-select: none;
+}
+.folder-icon {
+  width: 70%;
+  pointer-events: none;
+  user-select: none;
+}
+
+.folder-icon svg {
+  width: 30px;
+  fill: $primary-blue;
+}
+.link-icon svg {
+  fill: currentColor;
+  width: 20px;
+  transition: 0.2s ease;
+  // margin-left: 10px;
+}
+.link-icon {
+  display: flex;
+}
+.card__link {
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link-icon svg:hover {
+  fill: $primary-blue;
+  transition: 0.2s ease;
+}
+
+.card__body {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.card__body__title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  pointer-events: none;
+  user-select: none;
+  justify-self: flex-start;
+}
+
+.card__body__text {
+  line-height: 1.4;
+  pointer-events: none;
+  user-select: none;
+}
+
+.card__footer {
+  opacity: 0.4;
+  font-size: 1.5rem;
+  word-spacing: 15px;
+  font-family: $titillium;
+  pointer-events: none;
+  user-select: none;
+}
+
+@for $i from 1 to 7 {
+  .slideInCard {
+    &:nth-child(#{$i}) {
+      animation: 0.5s ease slideInCard forwards;
+      animation-delay: $i * (1s/10);
+    }
+  }
+}
+
+@keyframes slideInCard {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

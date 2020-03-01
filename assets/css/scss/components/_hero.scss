@@ -1,0 +1,159 @@
+.hero {
+  width: 100%;
+}
+
+.navigation {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10rem;
+  color: $primary-gray;
+  padding: 0 $side-padding;
+  transition: 0.2s ease-out;
+  background-color: $primary-bg;
+  z-index: 10;
+  @include for-phone {
+    padding: 0 20px;
+  }
+}
+
+.navigation--scroll {
+  background: $primary-bg;
+  box-shadow: 0px 4px 5px $secondary-bg;
+  height: 6rem;
+  transition: 0.2s ease-out;
+}
+
+.navigation__logo {
+  font-size: 2rem;
+  font-family: $titillium;
+  font-weight: 400;
+}
+
+.navigation__logo__link {
+  color: $primary-gray;
+  animation: 2s ease fadeInAnimation;
+}
+
+.navigation__logo__image {
+  width: 45px;
+  margin-right: 10px;
+}
+//usunjevaric text next to logo
+.navigation__logo__text {
+  @include for-phone {
+    display: none;
+  }
+}
+.navigation__logo__link:hover,
+.menu__item:hover {
+  color: $primary-blue;
+  transition: 0.3s color ease-in-out;
+}
+
+.navigation__menu {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-family: $roboto;
+
+  @include for-phone {
+    display: none;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s ease;
+}
+
+.menu__item {
+  margin: 0 3rem;
+  transition: 0.3s color ease-in-out;
+}
+
+.last-item {
+  margin-right: 0px;
+  margin-left: 40px;
+}
+
+.welcome {
+  font-family: $roboto;
+  color: $primary-gray;
+  font-family: $calibre;
+  margin-top: 15rem;
+  @include for-phone {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
+}
+
+.welcome__paragraph {
+  color: $primary-blue;
+  font-size: 1.6rem;
+  font-family: $mono;
+  font-weight: normal;
+  margin: 0px 0px 20px 3px;
+  opacity: 0;
+  animation: 0.5s menuItemSlideFromTopAnimation 1s forwards;
+
+  @include for-phone {
+    font-size: 1.3rem;
+    animation-delay: 0.6s;
+  }
+}
+
+.welcome__h2 {
+  font-size: 8rem;
+  line-height: 1.1;
+  opacity: 0;
+  animation: 0.5s menuItemSlideFromTopAnimation 1.3s forwards;
+  @include for-phone {
+    font-size: 3.8rem;
+    animation-delay: 0.9s;
+  }
+}
+
+.welcome__h4 {
+  font-size: 6rem;
+  line-height: 1.2;
+  color: darken($color: $primary-gray, $amount: 30%);
+  opacity: 0;
+  animation: 0.5s menuItemSlideFromTopAnimation 1.7s forwards;
+  @include for-phone {
+    font-size: 3.2rem;
+    animation-delay: 1.2s;
+  }
+}
+.welcome__about {
+  font-size: 2rem;
+  margin: 4rem 0;
+  width: 40%;
+  line-height: 1.5;
+  color: darken($color: $primary-gray, $amount: 10%);
+  opacity: 0;
+  animation: 0.5s menuItemSlideFromBootomAnimation 2.1s forwards;
+  @include for-phone {
+    width: 100%;
+    font-size: 1.6rem;
+    margin: 2rem 0;
+    animation-delay: 1.6s;
+  }
+}
+.slideFromTop {
+  animation: 1s ease menuItemSlideFromTopAnimation forwards;
+  opacity: 0;
+}
+
+@for $i from 1 to 5 {
+  .slideFromTop {
+    &:nth-child(#{$i}) {
+      animation-delay: $i * (1s/13);
+    }
+  }
+}
