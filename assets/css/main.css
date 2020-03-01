@@ -516,7 +516,7 @@ textarea {
   font-size: 1.4rem;
   opacity: 0;
   animation: 0.5s menuItemSlideFromBootomAnimation 2.5s forwards;
-  z-index: 1000; }
+  z-index: 99; }
   @media (max-width: 599px) {
     .btn--welcome {
       font-size: 1.2rem;
@@ -833,6 +833,19 @@ textarea {
 
 .slideFromTop:nth-child(4) {
   animation-delay: 0.30769s; }
+
+#particles {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60%;
+  right: 0;
+  opacity: 0;
+  animation: 6s ease fadeInAnimation forwards; }
+  @media (max-width: 599px) {
+    #particles {
+      width: 100%;
+      height: 85%; } }
 
 .side-email {
   position: fixed;

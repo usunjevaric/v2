@@ -120,3 +120,5 @@ MODALBG.addEventListener('click', (e) => {
 
 MODALCLOSE.addEventListener('click', toggleModal)
 
+
+
