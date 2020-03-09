@@ -11,7 +11,7 @@ const projects = [
     title: "TicTacToe",
     text: "My first project in React, a famous game I used to practice what i learn about React.The style is written using a sass preprocessor. Players can enter names, nice animation for winner and much more",
     codeLink: "https://github.com/usunjevaric/tictactoe",
-    liveLink: "https://usunjevaric.github.io/landingClock/",
+    liveLink: "",
     image: './assets/images/tictactoe.jpg',
     tech: ['HTML', 'SCSS', 'JavaScritp', 'React', 'npm', 'Redux']
   },
@@ -19,7 +19,7 @@ const projects = [
     title: "Social App",
     text: "In this project i follow FreeCodeCamp.org. Application also use back-end written with Node.js. For storage is used firebase. Registration, login, change profile picture, add post and comments, live notifications and much more",
     codeLink: "https://github.com/usunjevaric/socialAppFront",
-    liveLink: "https://usunjevaric.github.io/landingClock/",
+    liveLink: "",
     image: './assets/images/social.jpg',
     tech: ['HTML', 'SCSS', 'JavaScritp', 'React', 'npm', 'Redux', 'Firebase', 'React Router']
   },
@@ -30,6 +30,22 @@ const projects = [
     liveLink: "https://usunjevaric.github.io/diceGame/dist/",
     image: './assets/images/dicegame.jpg',
     tech: ['HTML', 'SCSS', 'JavaScritp']
+  },
+  {
+    title: "Old Portfolio",
+    text: "First portfolio site. Created only with HTML and CSS. Some JavaScript used for animation and modal box ",
+    codeLink: "https://github.com/usunjevaric/v1",
+    liveLink: "https://usunjevaric.github.io/v1/",
+    image: './assets/images/protfoliov1.jpg',
+    tech: ['HTML', 'SCSS', 'JavaScritp']
+  },
+  {
+    title: "Garderober",
+    text: "Full stack web application, created as project on faculty. Registration, login, add stuff for selling, pagination, user types and much more. After registration, user can login to account and start with selling. Upload images also works fine",
+    codeLink: "https://github.com/usunjevaric/Garderober",
+    liveLink: "",
+    image: './assets/images/garderober.jpg',
+    tech: ['HTML', 'SCSS', 'JavaScritp', 'PHP 7', 'MySQL']
   },
 
 ];
