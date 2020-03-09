@@ -93,6 +93,7 @@ function fillModal(card) {
   MODALTEXT.textContent = text;
   CODELINK.setAttribute('href', `${codeLink}`);
   LIVELINK.setAttribute('href', `${liveLink}`);
+
   MODALIMAGE.setAttribute('src', image);
   let list = '';
   tech.forEach(el => {
