@@ -1,20 +1,33 @@
 .phone-backdrop {
   display: none;
-  @include for-phone {
+  @include under900 {
     z-index: 99;
     position: fixed;
-    width: 75%;
+    width: 55%;
     height: 100%;
     display: flex;
     justify-content: flex-start;
     transform: translateX(-105%);
     transition-duration: 0.4s;
   }
+  @include for-phone {
+    width: 75%;
+  }
+  // @include for-phone {
+  //   z-index: 99;
+  //   position: fixed;
+  //   width: 75%;
+  //   height: 100%;
+  //   display: flex;
+  //   justify-content: flex-start;
+  //   transform: translateX(-105%);
+  //   transition-duration: 0.4s;
+  // }
 }
 
 .phone-navigation {
   display: none;
-  @include for-phone {
+  @include under900 {
     padding: 30px 0;
     position: absolute;
     transform: translateX(-105%);

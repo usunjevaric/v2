@@ -36,6 +36,10 @@
   @include for-phone {
     width: 80%;
   }
+
+  @include forTablet {
+    width: 49%;
+  }
 }
 
 .portfolio__item:hover {

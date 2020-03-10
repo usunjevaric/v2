@@ -83,13 +83,19 @@
   position: relative;
   display: none;
   border-radius: 3px;
-  @include for-phone {
+  animation: 2s ease fadeInAnimation;
+  @include under900 {
     display: block;
     transition-duration: 0.22s;
     transition-delay: 0.2s;
     transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
-  animation: 2s ease fadeInAnimation;
+  // @include for-phone {
+  //   display: block;
+  //   transition-duration: 0.22s;
+  //   transition-delay: 0.2s;
+  //   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  // }
 }
 
 .hamburger__line {
