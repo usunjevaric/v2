@@ -8,29 +8,29 @@
       }
     },
     "color": {
-      "value": "#ffffff"
+      "value": "#64ffda"
     },
     "shape": {
       "type": "circle"
     },
     "opacity": {
-      "value": 1,
+      "value": 0.6,
       "random": true
     },
     "size": {
-      "value": 1.5,
+      "value": 1,
       "random": true
     },
     "line_linked": {
       "enable": true,
       "distance": 140,
       "color": "#ffffff",
-      "opacity": 0.2,
+      "opacity": 0.1,
       "width": 1
     },
     "move": {
       "enable": true,
-      "speed": 2,
+      "speed": 1,
       "direction": "none",
       "random": true,
       "straight": false,

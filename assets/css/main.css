@@ -20,8 +20,13 @@ a:visited {
   outline: none; }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   max-width: 1600px;
+  min-height: 100vh;
   padding: 50px 170px 50px 170px;
   margin: 0 auto; }
   @media (max-width: 599px) {
@@ -570,7 +575,7 @@ textarea {
   display: none;
   border-radius: 3px;
   animation: 2s ease fadeInAnimation; }
-  @media (max-width: 599px) {
+  @media (max-width: 900px) {
     .hamburger {
       display: block;
       transition-duration: 0.22s;
@@ -614,20 +619,23 @@ textarea {
 
 .phone-backdrop {
   display: none; }
-  @media (max-width: 599px) {
+  @media (max-width: 900px) {
     .phone-backdrop {
       z-index: 99;
       position: fixed;
-      width: 75%;
+      width: 55%;
       height: 100%;
       display: flex;
       justify-content: flex-start;
       transform: translateX(-105%);
       transition-duration: 0.4s; } }
+  @media (max-width: 599px) {
+    .phone-backdrop {
+      width: 75%; } }
 
 .phone-navigation {
   display: none; }
-  @media (max-width: 599px) {
+  @media (max-width: 900px) {
     .phone-navigation {
       padding: 30px 0;
       position: absolute;
@@ -708,6 +716,9 @@ textarea {
   @media (max-width: 599px) {
     .navigation {
       padding: 0 20px; } }
+  @media (max-width: 900px) {
+    .navigation {
+      padding: 0 20px; } }
 
 .navigation--scroll {
   background: #09192f;
@@ -741,7 +752,7 @@ textarea {
   color: #ffffff;
   font-size: 1.4rem;
   font-family: "Roboto", sans-serif; }
-  @media (max-width: 599px) {
+  @media (max-width: 900px) {
     .navigation__menu {
       display: none; } }
 
@@ -760,6 +771,7 @@ textarea {
   margin-left: 40px; }
 
 .welcome {
+  width: 100%;
   font-family: "Roboto", sans-serif;
   color: #f0f0f0;
   font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
@@ -768,6 +780,10 @@ textarea {
     .welcome {
       margin-top: 10rem;
       margin-bottom: 10rem; } }
+  @media (min-width: 1800px) {
+    .welcome {
+      display: flex;
+      flex-direction: column; } }
 
 .welcome__paragraph {
   color: #64ffda;
@@ -776,7 +792,9 @@ textarea {
   font-weight: normal;
   margin: 0px 0px 20px 3px;
   opacity: 0;
-  animation: 0.5s menuItemSlideFromTopAnimation 1s forwards; }
+  animation: 0.5s menuItemSlideFromTopAnimation 1s forwards;
+  pointer-events: none;
+  user-select: none; }
   @media (max-width: 599px) {
     .welcome__paragraph {
       font-size: 1.3rem;
@@ -786,7 +804,9 @@ textarea {
   font-size: 8rem;
   line-height: 1.1;
   opacity: 0;
-  animation: 0.5s menuItemSlideFromTopAnimation 1.3s forwards; }
+  animation: 0.5s menuItemSlideFromTopAnimation 1.3s forwards;
+  pointer-events: none;
+  user-select: none; }
   @media (max-width: 599px) {
     .welcome__h2 {
       font-size: 3.8rem;
@@ -797,7 +817,9 @@ textarea {
   line-height: 1.2;
   color: #a4a4a4;
   opacity: 0;
-  animation: 0.5s menuItemSlideFromTopAnimation 1.7s forwards; }
+  animation: 0.5s menuItemSlideFromTopAnimation 1.7s forwards;
+  pointer-events: none;
+  user-select: none; }
   @media (max-width: 599px) {
     .welcome__h4 {
       font-size: 3.2rem;
@@ -810,7 +832,9 @@ textarea {
   line-height: 1.5;
   color: #d7d7d7;
   opacity: 0;
-  animation: 0.5s menuItemSlideFromBootomAnimation 2.1s forwards; }
+  animation: 0.5s menuItemSlideFromBootomAnimation 2.1s forwards;
+  pointer-events: none;
+  user-select: none; }
   @media (max-width: 599px) {
     .welcome__about {
       width: 100%;
@@ -838,14 +862,17 @@ textarea {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 60%;
+  width: 100%;
   right: 0;
   opacity: 0;
   animation: 6s ease fadeInAnimation forwards; }
-  @media (max-width: 599px) {
+  @media (min-width: 1800px) {
     #particles {
-      width: 100%;
-      height: 85%; } }
+      width: 1600px;
+      height: 80%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); } }
 
 .side-email {
   position: fixed;
@@ -1020,6 +1047,9 @@ textarea {
   @media (max-width: 599px) {
     .timeline {
       margin-top: 4rem; } }
+  @media (min-width: 600px) and (max-width: 800px) {
+    .timeline {
+      margin-top: 4rem; } }
 
 .timeline::after {
   content: "";
@@ -1033,6 +1063,9 @@ textarea {
   @media (max-width: 599px) {
     .timeline::after {
       left: 20px; } }
+  @media (min-width: 600px) and (max-width: 800px) {
+    .timeline::after {
+      left: 20px; } }
 
 .timeline-container {
   padding: 1rem 4rem;
@@ -1042,16 +1075,25 @@ textarea {
   @media (max-width: 599px) {
     .timeline-container {
       width: 100%; } }
+  @media (min-width: 600px) and (max-width: 800px) {
+    .timeline-container {
+      width: 100%; } }
 
 .timeline-container:nth-child(odd) {
   left: 0; }
   @media (max-width: 599px) {
     .timeline-container:nth-child(odd) {
       left: 20px; } }
+  @media (min-width: 600px) and (max-width: 800px) {
+    .timeline-container:nth-child(odd) {
+      left: 20px; } }
 
 .timeline-container:nth-child(even) {
   left: 50%; }
   @media (max-width: 599px) {
+    .timeline-container:nth-child(even) {
+      left: 20px; } }
+  @media (min-width: 600px) and (max-width: 800px) {
     .timeline-container:nth-child(even) {
       left: 20px; } }
 
@@ -1069,6 +1111,9 @@ textarea {
   @media (max-width: 599px) {
     .timeline-container::after {
       left: -9px; } }
+  @media (min-width: 600px) and (max-width: 800px) {
+    .timeline-container::after {
+      left: -9px; } }
 
 .timeline-container:nth-child(even)::after {
   left: -9px; }
@@ -1082,6 +1127,9 @@ textarea {
 .timeline-container:nth-child(odd) .timeline-container__content {
   box-shadow: 2px 1px 5px #050e1a; }
   @media (max-width: 599px) {
+    .timeline-container:nth-child(odd) .timeline-container__content {
+      box-shadow: -2px 1px 5px #050e1a; } }
+  @media (min-width: 600px) and (max-width: 800px) {
     .timeline-container:nth-child(odd) .timeline-container__content {
       box-shadow: -2px 1px 5px #050e1a; } }
 
@@ -1112,6 +1160,11 @@ textarea {
   border-width: 15px 0px 15px 15px;
   border-color: transparent transparent transparent #0b203c; }
   @media (max-width: 599px) {
+    .timeline-container:nth-child(odd) .timeline-container__content::before {
+      left: -12px;
+      border-width: 15px 15px 15px 0;
+      border-color: transparent #0b203c transparent transparent; } }
+  @media (min-width: 600px) and (max-width: 800px) {
     .timeline-container:nth-child(odd) .timeline-container__content::before {
       left: -12px;
       border-width: 15px 15px 15px 0;
@@ -1165,6 +1218,9 @@ textarea {
   @media (max-width: 599px) {
     .portfolio__item {
       width: 80%; } }
+  @media (min-width: 600px) and (max-width: 800px) {
+    .portfolio__item {
+      width: 49%; } }
 
 .portfolio__item:hover {
   transform: translateY(-3px);

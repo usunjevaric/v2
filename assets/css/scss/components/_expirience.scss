@@ -17,6 +17,9 @@
   @include for-phone {
     margin-top: 4rem;
   }
+  @include forTablet {
+    margin-top: 4rem;
+  }
 }
 
 .timeline::after {
@@ -32,6 +35,9 @@
   @include for-phone {
     left: 20px;
   }
+  @include forTablet {
+    left: 20px;
+  }
 }
 
 .timeline-container {
@@ -43,10 +49,16 @@
   @include for-phone {
     width: 100%;
   }
+  @include forTablet {
+    width: 100%;
+  }
 }
 .timeline-container:nth-child(odd) {
   left: 0;
   @include for-phone {
+    left: 20px;
+  }
+  @include forTablet {
     left: 20px;
   }
 }
@@ -54,6 +66,9 @@
 .timeline-container:nth-child(even) {
   left: 50%;
   @include for-phone {
+    left: 20px;
+  }
+  @include forTablet {
     left: 20px;
   }
 }
@@ -73,6 +88,9 @@
   @include for-phone {
     left: -9px;
   }
+  @include forTablet {
+    left: -9px;
+  }
 }
 .timeline-container:nth-child(even)::after {
   left: -9px;
@@ -88,6 +106,9 @@
 .timeline-container:nth-child(odd) .timeline-container__content {
   box-shadow: 2px 1px 5px darken($color: $primary-bg, $amount: 5%);
   @include for-phone {
+    box-shadow: -2px 1px 5px darken($color: $primary-bg, $amount: 5%);
+  }
+  @include forTablet {
     box-shadow: -2px 1px 5px darken($color: $primary-bg, $amount: 5%);
   }
 }
@@ -121,6 +142,11 @@
   border-color: transparent transparent transparent lighten($color: $primary-bg, $amount: 3%);
 
   @include for-phone {
+    left: -12px;
+    border-width: 15px 15px 15px 0;
+    border-color: transparent lighten($color: $primary-bg, $amount: 3%) transparent transparent;
+  }
+  @include forTablet {
     left: -12px;
     border-width: 15px 15px 15px 0;
     border-color: transparent lighten($color: $primary-bg, $amount: 3%) transparent transparent;
