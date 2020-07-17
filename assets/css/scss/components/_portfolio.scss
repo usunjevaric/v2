@@ -127,11 +127,11 @@
   user-select: none;
 }
 
-@for $i from 1 to 7 {
+@for $i from 1 to 10 {
   .slideInCard {
     &:nth-child(#{$i}) {
       animation: 0.5s ease slideInCard forwards;
-      animation-delay: $i * (1s/10);
+      animation-delay: $i * (1s/7);
     }
   }
 }
