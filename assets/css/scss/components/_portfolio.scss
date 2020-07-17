@@ -127,6 +127,16 @@
   user-select: none;
 }
 
+.view__more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  opacity: 0;
+  animation: 0.5s ease slideInCard forwards;
+  animation-delay: 4s;
+}
+
 @for $i from 1 to 10 {
   .slideInCard {
     &:nth-child(#{$i}) {
