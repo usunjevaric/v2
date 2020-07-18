@@ -12,11 +12,11 @@ const projects = [
   {
     title: "Social App",
     text:
-      "In this project i follow FreeCodeCamp.org. Application also use back-end written with Node.js. For storage is used firebase. Registration, login, change profile picture, add post and comments, live notifications and much more",
-    codeLink: "https://github.com/usunjevaric/socialAppFront",
-    liveLink: "https://socialapp-usunjevaric.netlify.app/",
+      "project for practicing popular  css framework. With 'Pixabay' API I made simple nice-looking  application for gallery. You can enter a term, display information about the picture and much more. I will continue to add a new feature in this app. Stay tunned.",
+    codeLink: "https://github.com/usunjevaric/gallery",
+    liveLink: "https://gallery-usunjevaric.netlify.app/",
     contact: false,
-    image: "./assets/images/social.jpg",
+    image: "./assets/images/gallery.jpg",
     tech: ["HTML", "SCSS", "JavaScritp", "React", "npm", "Redux", "Firebase", "React Router"],
   },
   {
@@ -82,7 +82,7 @@ const projects = [
   {
     title: "Report a problem",
     text:
-      "Another full-stack web application as a faculty project. The main usage of the application is for reporting problems in faculty building. Faculty persons who find some problem can log in with a personal account, and report a problem. After that workers can see a report and start with resolving. Admins have statistic and some extra benefits.",
+      "Another full-stack web application as a faculty project. The main usage of the application is for reporting problems in faculty building. Faculty persons who find some problem can log in with a personal account, and report a problem. After that workers can see a report.",
     codeLink: "",
     liveLink: "",
     contact: true,
